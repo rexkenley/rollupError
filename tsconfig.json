@@ -1,0 +1,30 @@
+{
+  "extends": "@tsconfig/recommended/tsconfig.json",
+  "compilerOptions": {
+    "allowSyntheticDefaultImports": true,
+    "alwaysStrict": true,
+    "declaration": true,
+    "esModuleInterop": true,
+    "jsx": "react-jsx",
+    "module": "esnext",
+    "moduleResolution": "node",
+    "noEmit": true,
+    "noImplicitAny": true,
+    "noImplicitReturns": true,
+    "noImplicitThis": true,
+    "outDir": "lib",
+    "sourceMap": true,
+    "strict": true,
+    "strictNullChecks": true,
+    "target": "es6",
+    "typeRoots": ["node_modules/@types"]
+  },
+  "include": ["src/**/*", "stories/**/*"],
+  "exclude": [
+    ".storybook",
+    "coverage",
+    "lib",
+    "node_modules",
+    "storybook-static"
+  ]
+}

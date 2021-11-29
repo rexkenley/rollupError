@@ -1,0 +1,5 @@
+{
+  "*.{js,jsx}": "npm run-script lint",
+  "*.{ts,tsx}": ["tsc-files", "npm run-script lint"],
+  "*": "npm run-script prettier:format"
+}

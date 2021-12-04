@@ -1,3 +1,4 @@
 import BingMaps from "./components/BingMaps";
+import { TimesheetDetails, TimesheetSummary } from "./components/Timesheet";
 
-export { BingMaps };
+export { BingMaps, TimesheetDetails, TimesheetSummary };

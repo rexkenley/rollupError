@@ -3,7 +3,6 @@ import { render, screen } from "@testing-library/react";
 
 import * as stories from "./TimesheetSummary.stories";
 
-import { ITimesheetSummaryProps } from "../../../src/components/Timesheet/TimesheetSummary";
 const {
   Default,
   Invisible,
@@ -26,9 +25,7 @@ const {
 } = composeStories(stories);
 
 test("Default", () => {
-  const { container } = render(
-    <Default {...(Default.args as ITimesheetSummaryProps)} />
-  );
+  const { container } = render(<Default />);
 
   expect(container.firstChild).toBeDefined();
 
@@ -46,17 +43,13 @@ test("Default", () => {
 });
 
 test("Invisible", () => {
-  const { container } = render(
-    <Invisible {...(Invisible.args as ITimesheetSummaryProps)} />
-  );
+  const { container } = render(<Invisible />);
 
   expect(container.firstChild).toBeNull();
 });
 
 test("Monday Value", () => {
-  const { container } = render(
-    <MondayValue {...(MondayValue.args as ITimesheetSummaryProps)} />
-  );
+  const { container } = render(<MondayValue />);
 
   expect(container.firstChild).toBeDefined();
 
@@ -78,9 +71,7 @@ test("Monday Value", () => {
 });
 
 test("Tuesday Value", () => {
-  const { container } = render(
-    <TuesdayValue {...(TuesdayValue.args as ITimesheetSummaryProps)} />
-  );
+  const { container } = render(<TuesdayValue />);
 
   expect(container.firstChild).toBeDefined();
 
@@ -102,9 +93,7 @@ test("Tuesday Value", () => {
 });
 
 test("Wednesday Value", () => {
-  const { container } = render(
-    <WednesdayValue {...(WednesdayValue.args as ITimesheetSummaryProps)} />
-  );
+  const { container } = render(<WednesdayValue />);
 
   expect(container.firstChild).toBeDefined();
 
@@ -126,9 +115,7 @@ test("Wednesday Value", () => {
 });
 
 test("Thursday Value", () => {
-  const { container } = render(
-    <ThursdayValue {...(ThursdayValue.args as ITimesheetSummaryProps)} />
-  );
+  const { container } = render(<ThursdayValue />);
 
   expect(container.firstChild).toBeDefined();
 
@@ -150,9 +137,7 @@ test("Thursday Value", () => {
 });
 
 test("Friday Value", () => {
-  const { container } = render(
-    <FridayValue {...(FridayValue.args as ITimesheetSummaryProps)} />
-  );
+  const { container } = render(<FridayValue />);
 
   expect(container.firstChild).toBeDefined();
 
@@ -174,9 +159,7 @@ test("Friday Value", () => {
 });
 
 test("Saturday Value", () => {
-  const { container } = render(
-    <SaturdayValue {...(SaturdayValue.args as ITimesheetSummaryProps)} />
-  );
+  const { container } = render(<SaturdayValue />);
 
   expect(container.firstChild).toBeDefined();
 
@@ -198,9 +181,7 @@ test("Saturday Value", () => {
 });
 
 test("Sunday Value", () => {
-  const { container } = render(
-    <SundayValue {...(SundayValue.args as ITimesheetSummaryProps)} />
-  );
+  const { container } = render(<SundayValue />);
 
   expect(container.firstChild).toBeDefined();
 
@@ -222,9 +203,7 @@ test("Sunday Value", () => {
 });
 
 test("Full Week Values", () => {
-  const { container } = render(
-    <FullWeekValues {...(FullWeekValues.args as ITimesheetSummaryProps)} />
-  );
+  const { container } = render(<FullWeekValues />);
 
   expect(container.firstChild).toBeDefined();
 
@@ -251,9 +230,7 @@ test("Full Week Values", () => {
 });
 
 test("Over 24 Value", () => {
-  const { container } = render(
-    <Over24Value {...(Over24Value.args as ITimesheetSummaryProps)} />
-  );
+  const { container } = render(<Over24Value />);
 
   expect(container.firstChild).toBeDefined();
 
@@ -265,9 +242,7 @@ test("Over 24 Value", () => {
 });
 
 test("Sunday Start Date", () => {
-  const { container } = render(
-    <SundayStartDate {...(SundayStartDate.args as ITimesheetSummaryProps)} />
-  );
+  const { container } = render(<SundayStartDate />);
 
   expect(container.firstChild).toBeDefined();
 
@@ -277,9 +252,7 @@ test("Sunday Start Date", () => {
 });
 
 test("Monday Start Date", () => {
-  const { container } = render(
-    <MondayStartDate {...(MondayStartDate.args as ITimesheetSummaryProps)} />
-  );
+  const { container } = render(<MondayStartDate />);
 
   expect(container.firstChild).toBeDefined();
 
@@ -289,9 +262,7 @@ test("Monday Start Date", () => {
 });
 
 test("Tuesday Start Date", () => {
-  const { container } = render(
-    <TuesdayStartDate {...(TuesdayStartDate.args as ITimesheetSummaryProps)} />
-  );
+  const { container } = render(<TuesdayStartDate />);
 
   expect(container.firstChild).toBeDefined();
 
@@ -301,11 +272,7 @@ test("Tuesday Start Date", () => {
 });
 
 test("Wednesday Start Date", () => {
-  const { container } = render(
-    <WednesdayStartDate
-      {...(WednesdayStartDate.args as ITimesheetSummaryProps)}
-    />
-  );
+  const { container } = render(<WednesdayStartDate />);
 
   expect(container.firstChild).toBeDefined();
 
@@ -315,11 +282,7 @@ test("Wednesday Start Date", () => {
 });
 
 test("Thursday Start Date", () => {
-  const { container } = render(
-    <ThursdayStartDate
-      {...(ThursdayStartDate.args as ITimesheetSummaryProps)}
-    />
-  );
+  const { container } = render(<ThursdayStartDate />);
 
   expect(container.firstChild).toBeDefined();
 
@@ -329,9 +292,7 @@ test("Thursday Start Date", () => {
 });
 
 test("Friday Start Date", () => {
-  const { container } = render(
-    <FridayStartDate {...(FridayStartDate.args as ITimesheetSummaryProps)} />
-  );
+  const { container } = render(<FridayStartDate />);
 
   expect(container.firstChild).toBeDefined();
 
@@ -341,11 +302,7 @@ test("Friday Start Date", () => {
 });
 
 test("Saturday Start Date", () => {
-  const { container } = render(
-    <SaturdayStartDate
-      {...(SaturdayStartDate.args as ITimesheetSummaryProps)}
-    />
-  );
+  const { container } = render(<SaturdayStartDate />);
 
   expect(container.firstChild).toBeDefined();
 

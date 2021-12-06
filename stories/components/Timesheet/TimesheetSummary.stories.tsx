@@ -1,9 +1,7 @@
 import { ComponentStory, ComponentMeta } from "@storybook/react";
 import { initializeIcons } from "@fluentui/react/lib/Icons";
 
-import TimesheetSummary, {
-  ITimesheetSummaryProps
-} from "../../../src/components/Timesheet/TimesheetSummary";
+import TimesheetSummary from "../../../src/components/Timesheet/TimesheetSummary";
 
 initializeIcons();
 
@@ -19,9 +17,9 @@ export default {
   }
 } as ComponentMeta<typeof TimesheetSummary>;
 
-const Template: ComponentStory<typeof TimesheetSummary> = (
-  args: ITimesheetSummaryProps
-) => <TimesheetSummary {...args} />;
+const Template: ComponentStory<typeof TimesheetSummary> = (args) => (
+  <TimesheetSummary {...args} />
+);
 
 export const Default = Template.bind({});
 Default.args = {};
